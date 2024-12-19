@@ -1,0 +1,49 @@
+[
+
+    {
+        "icon":"friend",
+        "content":"Find friends"
+    },
+    {
+        "icon":"memories",
+        "content":"Memories"
+    },
+    {
+        "icon":"saved",
+        "content":"Saved"
+    },
+    {
+        "icon":"groups",
+        "content":"Groups"
+    },
+    {
+        "icon":"video",
+        "content":"Video"
+    },
+    {
+        "icon":"marketplace",
+        "content":"MarketPlace"
+    },
+    {
+        "icon":"feeds",
+        "content":"Feeds"
+    },
+    {
+        "icon":"events",
+        "content":"Events"
+    },
+    {
+        "icon":"adsmanager",
+        "content":"Ads Manager"
+    },
+    {
+        "icon":"birthdays",
+        "content":"Birthdays"
+    },
+    {
+        "icon":"climate",
+        "content":"Climate Science Center"
+    }
+   
+]
+
