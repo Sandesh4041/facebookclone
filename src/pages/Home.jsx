@@ -5,16 +5,16 @@ import Asideright from '../component/Asideright'
 
 const Home = () => {
   return (
-    <div className={`flex`}>
-      <div className={`flex-none hidden lg:block`}>
+    <div className={`flex h-screen`}>
+      <div className={`flex-none hidden lg:block  `}>
      <Asideleft/>
       </div>
 
-      <div className={`grow `}>
+      <div className={`grow h-full overflow-y-auto`}>
      <Homemain/>
       </div>
 
-      <div className={`flex-none hidden sm:block`}>
+      <div className={`flex-none hidden sm:block `}>
      <Asideright/>
       </div>
     </div>

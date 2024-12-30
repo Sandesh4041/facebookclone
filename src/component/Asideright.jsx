@@ -4,7 +4,7 @@ import Contacts from '../contace/contact'
 
 const Asideright = () => {
   return (
-    <div>
+    <div >
       <Sponser/>
       <div>
         <Contacts/>

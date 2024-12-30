@@ -45,7 +45,7 @@ const Contacts = () => {
     <div>
       {contactData.map((item,i)=>
       <div className='flex gap-1 p-2 mt-1 hover:bg-gray-400'>
-      <img src={item.icons} alt="icons" className='w-8 h-8 rounded-full'/>
+      <img src={item.icons} alt="icons" className='w-8 h-8 rounded-full object-cover'/>
       <p className='ml-2 font-bold'>{item.profile}</p>
       </div>
       )}

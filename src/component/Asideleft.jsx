@@ -31,7 +31,7 @@ const icons={
 
 const Asideleft = () => {
   return (
-    <div>
+    <div >
     <div>
       <ul>
         {data.map((item,index)=>
