@@ -10,10 +10,7 @@ import Nopage from "./pages/Nopage";
 
 function App() {
   return (
-    <div className="App">
-
-   
- 
+    <div className="App pt-20">
   <div>
     <BrowserRouter>
     <Nav/>

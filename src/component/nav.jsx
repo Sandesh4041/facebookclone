@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import facebook from "../images/facebook.png";
 import { IoSearch } from "react-icons/io5";
 import { IoSearchOutline } from "react-icons/io5";
@@ -16,14 +16,16 @@ import { useNavigate } from "react-router-dom";
 // import {Link} from "react-router-dom";
 
 const Nav = () => {
+  const[navstate,setNavstate]=useState("");
   const navigation=useNavigate();
 
   const handleNavigate=(path)=>{
+    setNavstate(path);
     navigation(path);
   }
   return (
-    <div className="flex justify-between  sm:gap-3 md:gap-4 lg:gap-3 border-b-2 border-gray-400 shadow-gray-500 bg-white p-3">
-      <div className="flex gap-2 items-center">
+    <div className="fixed top-0 left-0 right-0 z-10  flex justify-between  sm:gap-3 md:gap-4 lg:gap-3 border-b-2 border-gray-400 shadow-gray-500 bg-white p-3">
+      <div className=" flex gap-2 items-center">
         <img src={facebook} alt="facebook" className="w-8 h-8 xs:w-10 xs:h-10  " />
         <div></div>
 
@@ -47,36 +49,36 @@ const Nav = () => {
       </div>
 
       <div className="hidden md:block">
-        <ul className="flex  justify-evenly gap-16 ">
+        <ul className="flex  justify-evenly gap-8 lg:gap-16 ">
 
-          <li className="hover:border-b-2 border-blue-500 w-full h-full cursor-pointer sm:ml-5" 
+          <li className={`w-full h-full cursor-pointer sm:ml-2  lg:ml-5 ${navstate==="/"?"border-b-2 border-blue-500":""}`}
           onClick={()=>handleNavigate("/")} >
             {/* <link to="/">   </link> */}
-            <IoHomeOutline className="w-8 h-8 text-gray-600 "/>
+            <IoHomeOutline className={`w-8 h-8  text-gray-600  ${navstate==="/"?"text-blue-500":""}`}/>
             </li>
 
-          <li className="hover:border-b-2 border-blue-500 w-full h-full cursor-pointer"
+          <li className={`w-full h-full cursor-pointer sm:ml-2  lg:ml-5 ${navstate==="/friends"?"border-b-2 border-blue-500":""}`}
            onClick={()=>handleNavigate("/friends")}>
             {/* <Link to="/friends"></Link> */}
-            <LiaUserFriendsSolid className="w-8 h-8  text-gray-600"/>
+            <LiaUserFriendsSolid className={`w-8 h-8  text-gray-600 ${navstate==="/friends"?"text-blue-500":""}`}/>
             </li>
 
-          <li className="hover:border-b-2 border-blue-500 w-full h-full cursor-pointer"
+          <li className={`w-full h-full cursor-pointer sm:ml-2  lg:ml-5 ${navstate==="/video"?"border-b-2 border-blue-500":""}`}
            onClick={()=>handleNavigate("/video")}>
             {/* <Link to="/video"></Link> */}
-            < MdVideoSettings className="w-8 h-8  text-gray-600"/>
+            < MdVideoSettings className={`w-8 h-8  text-gray-600 ${navstate==="/video"?"text-blue-500":""}`}/>
             </li>
 
-          <li className="hover:border-b-2 border-blue-500 w-full h-full cursor-pointer"
+          <li className={`w-full h-full cursor-pointer sm:ml-2  lg:ml-5 ${navstate==="/marketplace"?"border-b-2 border-blue-500":""}`}
            onClick={()=>handleNavigate("/marketplace")}>
             {/* <Link to="/marketplace"></Link> */}
-            <LiaStoreAltSolid className="w-8 h-8  text-gray-600"/>
+            <LiaStoreAltSolid className={`w-8 h-8  text-gray-600 ${navstate==="/marketplace"?"text-blue-500":""}`}/>
             </li>
 
-          <li className="hover:border-b-2 border-blue-500 w-full h-full cursor-pointer"
+          <li className={`w-full h-full cursor-pointer sm:ml-2  lg:ml-5 ${navstate==="/gaming"?"border-b-2 border-blue-500":""}`}
            onClick={()=>handleNavigate("/gaming")}>
           {/* <Link to="gaming"></Link> */}
-          <GrGamepad className="w-8 h-8  text-gray-600"/>
+          <GrGamepad className={`w-8 h-8  text-gray-600 ${navstate==="/gaming"?"text-blue-500":""}`}/>
             </li>
 
         </ul>

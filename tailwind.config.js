@@ -8,6 +8,7 @@ module.exports = {
       screens:{
         xs: '350px',  // Custom 'xs' breakpoint at 350px
         // You can also customize other breakpoints if needed
+        me:'550px',
         sm: '640px',
         md: '768px',
         lg: '1024px',

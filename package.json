@@ -1,9 +1,8 @@
 {
   "name": "facebookclone",
   "version": "0.1.0",
-  "private": true,
   "dependencies": {
-    "@chakra-ui/react": "^3.2.3",
+    "@babel/plugin-proposal-private-property-in-object": "^7.21.11",
     "@emotion/react": "^11.14.0",
     "@emotion/styled": "^11.14.0",
     "@testing-library/jest-dom": "^5.17.0",

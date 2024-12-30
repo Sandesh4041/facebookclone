@@ -1,9 +1,22 @@
 import React from 'react'
+import Asideleft from '../component/Asideleft'
+import Homemain from '../component/Homemain'
+import Asideright from '../component/Asideright'
 
 const Home = () => {
   return (
-    <div>
-      <h1>home</h1>
+    <div className={`flex`}>
+      <div className={`flex-none hidden lg:block`}>
+     <Asideleft/>
+      </div>
+
+      <div className={`grow `}>
+     <Homemain/>
+      </div>
+
+      <div className={`flex-none hidden sm:block`}>
+     <Asideright/>
+      </div>
     </div>
   )
 }
